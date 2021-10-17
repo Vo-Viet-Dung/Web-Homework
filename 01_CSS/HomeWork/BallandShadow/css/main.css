@@ -1,0 +1,121 @@
+.body{
+    margin: 0;
+    padding: 0;
+}
+
+.wrap-container{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: relative;
+}
+
+.ball{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: #8D8D8D;
+    top: 5%;
+    left: 50%;
+    margin-left: -100px;
+    display: flex;
+    justify-content: center;
+    animation: bounce 1s infinite;
+}
+
+.ball .light{
+    top: 10px;
+    position: absolute;
+    width: 115px;
+    height: 54px;
+    background-color: #C9C9C9;
+    border-radius: 50%;
+    background-image: linear-gradient(#E5E5E5, #AFAFAF);
+    
+}
+
+.ball .light-center {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background-color: #969696;
+    border-radius: 50%;
+    opacity: 0.1;
+    background-image: linear-gradient(#AFAFAF, #7B7B7B);
+}
+
+@keyframes bounce{
+    10%{
+        height: 200px;
+        width: 200px;
+    }
+    
+    50%{
+        height: 150px;
+        width: 240px;
+        margin-left: -120px;
+        transform: translateY(500px);
+    }
+}
+
+.footer-ball{
+    position: fixed;
+    height: 38px;
+    width: 166px;
+    left: 50%;
+    bottom: 25px;
+    border-radius: 50%;
+    margin-left: -83px;
+    background-color: #D6D6D6;
+    box-shadow: #D6D6D6 0px 0px 10px 10px;
+    animation: fix-light 1s infinite;
+}
+
+@keyframes fix-light {
+    0% {
+        bottom: 0;
+        height: 50px;
+        width: 120px;
+        margin-left: -55px;
+        animation-timing-function: ease-in;
+    }
+    50% {
+        bottom: 50px;
+        height: 42px;
+        width: 155px;
+        margin-left: -80px;
+        animation-timing-function: ease-out;
+    }
+    55% {
+        bottom: 60px;
+        height: 42px;
+        border-radius: 50%;
+        width: 145px;
+        margin-left: -75px;
+        animation-timing-function: ease-in;
+    }
+    65% {
+        bottom: 50px;
+        height: 38px;
+        border-radius: 50%;
+        width: 135px;
+        margin-left: -70px;
+        animation-timing-function: ease-out;
+    }
+    95% {
+        bottom: 0;
+        height: 42px;
+        width: 120px;
+        margin-left: -55px;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        bottom: 0;
+        height: 50px;
+        width: 100px;
+        margin-left: -40px;
+        animation-timing-function: ease-in;
+    }
+}
