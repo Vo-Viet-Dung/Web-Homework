@@ -1,0 +1,325 @@
+/* Định dạng khuôn */
+
+html {
+    background: white;
+    text-align: center;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    position: relative;
+    padding: 2rem;
+    border: 7px solid #282828;
+    box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.5), inset -4px -4px 10px rgba(67, 67, 67, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    margin: 50px auto;
+}
+
+
+/* Tạo 2 trục chính*/
+
+.outer-clock-face {
+    position: relative;
+    background: white;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.outer-clock-face::after {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.outer-clock-face::after,
+.outer-clock-face::before,
+.outer-clock-face .marking {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #1df52f;
+    z-index: 3;
+    left: 49%;
+}
+
+
+/* Tạo các trục thành phần */
+
+
+/* Trục giờ */
+
+.outer-clock-face .marking {
+    background: #bdbdcb;
+    width: 3px;
+}
+
+.outer-clock-face .marking.marking-one {
+    z-index: 3;
+    background: black;
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    transform: rotate(30deg)
+}
+
+.outer-clock-face .marking.marking-two {
+    z-index: 3;
+    background: black;
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    transform: rotate(60deg)
+}
+
+.outer-clock-face .marking.marking-three {
+    z-index: 3;
+    background: black;
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    transform: rotate(120deg)
+}
+
+.outer-clock-face .marking.marking-four {
+    z-index: 3;
+    background: black;
+    -webkit-transform: rotate(150deg);
+    -moz-transform: rotate(150deg);
+    transform: rotate(150deg)
+}
+
+
+/* Trục phút */
+
+.outer-clock-face .marking.marking-1 {
+    -webkit-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    transform: rotate(6deg)
+}
+
+.outer-clock-face .marking.marking-2 {
+    -webkit-transform: rotate(12deg);
+    -moz-transform: rotate(12deg);
+    transform: rotate(12deg)
+}
+
+.outer-clock-face .marking.marking-3 {
+    -webkit-transform: rotate(18deg);
+    -moz-transform: rotate(18deg);
+    transform: rotate(18deg)
+}
+
+.outer-clock-face .marking.marking-4 {
+    -webkit-transform: rotate(24deg);
+    -moz-transform: rotate(24deg);
+    transform: rotate(24deg)
+}
+
+.outer-clock-face .marking.marking-5 {
+    -webkit-transform: rotate(36deg);
+    -moz-transform: rotate(36deg);
+    transform: rotate(36deg)
+}
+
+.outer-clock-face .marking.marking-6 {
+    -webkit-transform: rotate(42deg);
+    -moz-transform: rotate(42deg);
+    transform: rotate(42deg)
+}
+
+.outer-clock-face .marking.marking-7 {
+    -webkit-transform: rotate(48deg);
+    -moz-transform: rotate(48deg);
+    transform: rotate(48deg)
+}
+
+.outer-clock-face .marking.marking-8 {
+    -webkit-transform: rotate(54deg);
+    -moz-transform: rotate(54deg);
+    transform: rotate(54deg)
+}
+
+.outer-clock-face .marking.marking-9 {
+    -webkit-transform: rotate(66deg);
+    -moz-transform: rotate(66deg);
+    transform: rotate(66deg)
+}
+
+.outer-clock-face .marking.marking-10 {
+    -webkit-transform: rotate(72deg);
+    -moz-transform: rotate(72deg);
+    transform: rotate(72deg)
+}
+
+.outer-clock-face .marking.marking-11 {
+    -webkit-transform: rotate(78deg);
+    -moz-transform: rotate(78deg);
+    transform: rotate(78deg)
+}
+
+.outer-clock-face .marking.marking-12 {
+    -webkit-transform: rotate(84deg);
+    -moz-transform: rotate(84deg);
+    transform: rotate(84deg)
+}
+
+.outer-clock-face .marking.marking-13 {
+    -webkit-transform: rotate(96deg);
+    -moz-transform: rotate(96deg);
+    transform: rotate(96deg)
+}
+
+.outer-clock-face .marking.marking-14 {
+    -webkit-transform: rotate(102deg);
+    -moz-transform: rotate(102deg);
+    transform: rotate(102deg)
+}
+
+.outer-clock-face .marking.marking-15 {
+    -webkit-transform: rotate(108deg);
+    -moz-transform: rotate(108deg);
+    transform: rotate(108deg)
+}
+
+.outer-clock-face .marking.marking-16 {
+    -webkit-transform: rotate(114deg);
+    -moz-transform: rotate(114deg);
+    transform: rotate(114deg)
+}
+
+.outer-clock-face .marking.marking-17 {
+    -webkit-transform: rotate(126deg);
+    -moz-transform: rotate(126deg);
+    transform: rotate(126deg)
+}
+
+.outer-clock-face .marking.marking-18 {
+    -webkit-transform: rotate(132deg);
+    -moz-transform: rotate(132deg);
+    transform: rotate(132deg)
+}
+
+.outer-clock-face .marking.marking-19 {
+    -webkit-transform: rotate(138deg);
+    -moz-transform: rotate(138deg);
+    transform: rotate(138deg)
+}
+
+.outer-clock-face .marking.marking-20 {
+    -webkit-transform: rotate(144deg);
+    -moz-transform: rotate(144deg);
+    transform: rotate(144deg)
+}
+
+.outer-clock-face .marking.marking-21 {
+    -webkit-transform: rotate(156deg);
+    -moz-transform: rotate(156deg);
+    transform: rotate(156deg)
+}
+
+.outer-clock-face .marking.marking-22 {
+    -webkit-transform: rotate(162deg);
+    -moz-transform: rotate(162deg);
+    transform: rotate(162deg)
+}
+
+.outer-clock-face .marking.marking-23 {
+    -webkit-transform: rotate(168deg);
+    -moz-transform: rotate(168deg);
+    transform: rotate(168deg)
+}
+
+.outer-clock-face .marking.marking-24 {
+    -webkit-transform: rotate(174deg);
+    -moz-transform: rotate(174deg);
+    transform: rotate(174deg)
+}
+
+
+/* Tạo giao diện mặt trong của đồng hồ */
+
+
+/* .inner-clock-face-hour {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    background: white;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    z-index: 4;
+} */
+
+.inner-clock-face {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: white;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    z-index: 3;
+}
+
+.inner-clock-face::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 18px;
+    margin-left: -9px;
+    margin-top: -6px;
+    background: #ee791a;
+    z-index: 11;
+}
+
+
+/* Tạo kim giờ phút giây */
+
+.hand {
+    width: 50%;
+    right: 50%;
+    height: 6px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    border-radius: 6px;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand.hour-hand {
+    width: 30%;
+    z-index: 3;
+}
+
+.hand.min-hand {
+    height: 3px;
+    z-index: 10;
+    width: 40%;
+}
+
+.hand.second-hand {
+    background: #ee791a;
+    width: 45%;
+    height: 2px;
+    z-index: 12;
+}
